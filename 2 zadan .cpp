@@ -2,37 +2,47 @@
 #include <iostream>
 
 using namespace std;
-string word1;
-string word2;
-void slovo1()
+string text;
+string word;
+string Z =""; 
+int max = 0;
+int lenghts = 0;
+void text()
 {
     
-    cout<<"vvedite slovo"<<endl;
-    cin>>word1;
-    
+    cout<<"text "<<endl;
+    cin>>text;
+    for ( int i=0; i<text.length();i++)
+        { 
+            if ( text[i] !=" " || text[i] != "?" || text[i] !=  "!" || text[i] != "."  || text[i] != ",")
+            {
+                Z = Z+text[i];
+                lenghts++;
+            }
+            else if
+            {   
+                if(max<lenghts)
+                {
+                word=Z;
+                max = lenghts;
+                    lenghts=0;
+                    Z="";
+                }
+                else
+                {
+                lenghts = 0;
+                    Z="";
+                }
+        }
+}
 
-}
-void slovo2()
-{
-    cout<<"vvedite slovo"<<endl;
-    cin>>word2;
-    
-}
 void sravnenie()
 {
-    if(word1.length()>word2.length())
-    {
-        cout<<"bolshe "<<word1<<endl;
-        cout<<"menshe "<<word2<<endl;
-    }
-    else{
-        cout<<"bolshe "<<word2<<endl;
-        cout<<"menshe "<<word1<<endl;
-    }
+  
 }
 int main()
 {
-    slovo1();
-    slovo2();
+    text();
+    ();
     sravnenie();
 }
